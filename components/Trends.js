@@ -10,7 +10,7 @@ function Trends() {
   const [trendsData, setTrendsData] = useState([]);
 
   useEffect(() => {
-    fetch(`http://localhost:3000/tweets/trends/${user.token}`)
+    fetch(`https://hackatweet-backend-685952935346.europe-west9.run.app/tweets/trends/${user.token}`)
       .then(response => response.json())
       .then(data => {
         data.result && setTrendsData(data.trends);
